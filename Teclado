@@ -1,0 +1,16 @@
+package mundopc;
+
+public class Teclado extends DispositivoEntrada {
+	private final int idTeclado;
+	private static int contadorTeclado;
+	
+	public Teclado (String tipoEntrada, String Marca) {
+		super(tipoEntrada, Marca);
+		idTeclado=++Teclado.contadorTeclado;
+	}
+
+	@Override
+	public String toString() { //toString con toString padre
+		return "Teclado [idTeclado=" + idTeclado + " " + super.toString() + "]";
+	}
+}
